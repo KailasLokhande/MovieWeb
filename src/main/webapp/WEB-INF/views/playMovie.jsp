@@ -41,7 +41,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Movies</a>
+				<a class="navbar-brand" href="/movie/">Movies</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
@@ -62,9 +62,7 @@
 		<!-- Page Header -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">
-					Watch Movies For Free... <small>Not at all commercial..</small>
-				</h1>
+				<h1 class="page-header">Your Are Watching ${movie.name}</h1>
 			</div>
 		</div>
 		<!-- /.row -->
@@ -72,64 +70,29 @@
 		<!-- Movies Row -->
 
 
-		<c:if test="${not empty movies}">
+		<c:if test="${not empty movie}">
+<!-- 		
 
-				<c:set value="1" var="num" scope="page" />
-				<div class="row">
-				<c:forEach var="movie" items="${movies}">
-					<c:if test="${num eq 4}">
-									</div>
-									<div class="row">
-									<c:set value="1" var="num" scope="page" />
-					</c:if>
-					<div class="col-md-4 portfolio-item">
-						<a href="/movie/play/${movie.mId}"> <img class="img-responsive"
-							src="${movie.posterUrl}" alt="" height="400" width="700">
-						</a>
-						<h3>
-							<a href="/movie/play/${movie.mId}">${movie.name}</a>
-						</h3>
-					</div>
-					<c:set var="num" value="${num + 1}" scope="page" />
+				<c:forEach var="link" items="${movie.movieLinks}">
+					<source src="${link.link}">
 				</c:forEach>
-			 </div>
+				Your browser does not support HTML5 video.
+			</video>
+	 -->		
+			<iframe src="${movieLink}" style="width: 750px; height: 400.25px;">
+			
+			</iframe>
 		</c:if>
 
-		
+
 		<!-- /.row -->
-
 		<hr>
-		<!-- Pagination -->
-		<div class="row text-center">
-			<div class="col-lg-12">
-				<ul class="pagination">
-					<li><a href="/movie/Page/${currentPage - 1 }">&laquo;</a></li>
-					<c:forEach var="page" begin="1" end="${pages}">
-
-						<c:choose>
-							<c:when test="${currentPage eq page}">
-								<li class="active">
-							</c:when>
-							<c:otherwise>
-								<li>
-							</c:otherwise>
-						</c:choose>
-						<a href="/movie/Page/${page}">${page}</a>
-						</li>
-					</c:forEach>
-					<li><a href="/movie/Page/${currentPage + 1 }">&raquo;</a></li>
-				</ul>
-			</div>
-		</div>
-		<!-- /.row -->
-
-		<hr>
-
+		Alot More To Come... Wait And Watch... :)
 		<!-- Footer -->
 		<footer>
 			<div class="row">
 				<div class="col-lg-12">
-					<p>Copyright &copy; Vikas Lokhande Website 2014</p>5
+					<p>Copyright &copy; Vikas Lokhande Website 2015</p>
 				</div>
 			</div>
 			<!-- /.row -->
