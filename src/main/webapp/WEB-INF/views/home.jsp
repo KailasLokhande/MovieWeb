@@ -129,7 +129,7 @@
 		<footer>
 			<div class="row">
 				<div class="col-lg-12">
-					<p>Copyright &copy; Vikas Lokhande Website 2014</p>5
+					<p>Copyright &copy; Vikas Lokhande Website 2015</p>5
 				</div>
 			</div>
 			<!-- /.row -->
